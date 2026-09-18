@@ -198,16 +198,59 @@ function Index() {
             </span>
           </a>
           <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
-            <a href="#services" className="hover:text-primary transition-colors">Services</a>
-            <a href="#why-us" className="hover:text-primary transition-colors">Why Us</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="relative after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:text-primary hover:after:origin-bottom-left hover:after:scale-x-100 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
-          <a
-            href={PHONE_HREF}
-            className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/25 sm:inline-flex"
-          >
-            <Phone className="size-4" /> Call Now
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href={PHONE_HREF}
+              className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/25 sm:inline-flex"
+            >
+              <Phone className="size-4" /> Call Now
+            </a>
+            <button
+              type="button"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((open) => !open)}
+              className="inline-flex size-11 items-center justify-center rounded-xl border border-border bg-card text-foreground transition-colors hover:border-primary hover:text-primary md:hidden"
+            >
+              {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+            </button>
+          </div>
+        </div>
+        {/* Mobile nav menu */}
+        <div
+          className={`overflow-hidden border-t border-border/70 bg-background/95 backdrop-blur-md transition-all duration-300 md:hidden ${
+            menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <nav className="flex flex-col gap-1 px-6 py-4 text-sm font-semibold">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="rounded-lg px-3 py-3 transition-colors hover:bg-secondary hover:text-primary"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href={PHONE_HREF}
+              onClick={() => setMenuOpen(false)}
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 font-bold text-primary-foreground"
+            >
+              <Phone className="size-4" /> Call {PHONE_DISPLAY}
+            </a>
+          </nav>
         </div>
       </header>
 
