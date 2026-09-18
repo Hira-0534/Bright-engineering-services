@@ -1,5 +1,8 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
+  Menu,
+  X,
   Zap,
   Wrench,
   HardHat,
