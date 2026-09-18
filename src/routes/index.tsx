@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Menu,
@@ -257,7 +257,7 @@ function Index() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:py-24">
-          <div>
+          <div data-reveal>
             <span className="mb-6 inline-block rounded-full bg-secondary px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-secondary-foreground">
               Engineering · Construction · Facility Care
             </span>
