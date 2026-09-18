@@ -19,7 +19,7 @@ import {
 
 import besMark from "@/assets/bes-mark.asset.json";
 import heroImage from "@/assets/hero-generator.jpg";
-import cleaningImage from "@/assets/cleaning-team.jpg";
+import cleaningImage from "@/assets/deep-cleaning.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
