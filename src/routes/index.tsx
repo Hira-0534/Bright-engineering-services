@@ -19,7 +19,6 @@ import {
 
 import besMark from "@/assets/bes-mark.asset.json";
 import heroImage from "@/assets/hero-generator.jpg";
-import cleaningImage from "@/assets/deep-cleaning.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -297,43 +296,25 @@ function Index() {
 
       {/* Why us */}
       <section id="why-us" className="scroll-mt-24 bg-navy text-navy-foreground">
-        <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-20 lg:grid-cols-2">
-          <div>
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <div className="max-w-3xl">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Why BES</span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
               Engineering discipline meets spotless results
             </h2>
-            <div className="mt-10 space-y-8">
-              {whyUs.map((item) => (
-                <div key={item.title} className="flex gap-5">
-                  <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
-                    <item.icon className="size-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg font-bold">{item.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed opacity-70">{item.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
-          <div className="relative">
-            <div className="overflow-hidden rounded-3xl ring-1 ring-white/10">
-              <img
-                src={cleaningImage}
-                alt="BES cleaning team deep cleaning a modern home"
-                width={912}
-                height={1200}
-                loading="lazy"
-                className="aspect-[4/5] w-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-4 rounded-2xl bg-primary px-8 py-6 text-primary-foreground shadow-xl sm:-left-8">
-              <p className="font-display text-3xl font-bold">24/7</p>
-              <p className="text-xs font-semibold uppercase tracking-widest opacity-80">
-                Emergency response
-              </p>
-            </div>
+          <div className="mt-10 grid gap-x-14 gap-y-8 sm:grid-cols-2">
+            {whyUs.map((item) => (
+              <div key={item.title} className="flex gap-5">
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                  <item.icon className="size-5" />
+                </div>
+                <div>
+                  <h3 className="font-display text-lg font-bold">{item.title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed opacity-70">{item.text}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
