@@ -112,12 +112,12 @@
   ::selection {
     background-color: color-mix(in oklab, var(--color-primary) 25%, transparent);
   }
-}
 
   html {
     scroll-behavior: smooth;
   }
 }
+
 
 /* Scroll-reveal: sections fade and rise in as they enter the viewport */
 @layer components {
