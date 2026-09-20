@@ -235,12 +235,12 @@ function Index() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:gap-12 lg:py-24">
           <div data-reveal>
             <span className="mb-6 inline-block rounded-full bg-secondary px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-secondary-foreground">
               Engineering · Construction · Facility Care
             </span>
-            <h1 className="font-display text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-3xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
               Power, build &amp; care for your space —{" "}
               <span className="text-primary">all in one call.</span>
             </h1>
@@ -278,8 +278,8 @@ function Index() {
               </span>
             </div>
           </div>
-          <div className="relative">
-            <div className="overflow-hidden rounded-3xl shadow-2xl shadow-navy/20 ring-1 ring-black/5">
+          <div className="relative" data-reveal style={{ "--reveal-delay": "150ms" } as CSSProperties}>
+            <div className="overflow-hidden rounded-3xl shadow-2xl shadow-navy/20 ring-1 ring-black/5 transition-transform duration-500 hover:scale-[1.02]">
               <img
                 src={heroImage}
                 alt="BES technician servicing an industrial generator"
@@ -298,8 +298,8 @@ function Index() {
 
       {/* Services */}
       <section id="services" className="scroll-mt-24 border-t border-border bg-card">
-        <div className="mx-auto max-w-7xl px-6 py-20" data-reveal>
-          <div className="mb-14 max-w-2xl">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20" data-reveal>
+          <div className="mb-10 max-w-2xl sm:mb-14">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">What We Do</span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
               Complete services for your property
@@ -309,11 +309,13 @@ function Index() {
               same reliable team.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
+          <div className="grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+            {services.map((service, i) => (
               <div
                 key={service.title}
-                className="group rounded-2xl border border-border bg-background p-7 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10"
+                data-reveal
+                style={{ "--reveal-delay": `${(i % 3) * 90}ms` } as CSSProperties}
+                className="group rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 sm:p-7"
               >
                 <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-secondary text-secondary-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                   <service.icon className="size-6" />
@@ -327,7 +329,7 @@ function Index() {
             {/* CTA card fills the grid */}
             <a
               href={PHONE_HREF}
-              className="group flex flex-col justify-between rounded-2xl bg-navy p-7 text-navy-foreground transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="group flex flex-col justify-between rounded-2xl bg-navy p-6 text-navy-foreground transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-navy/30 sm:p-7"
             >
               <div>
                 <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground">
