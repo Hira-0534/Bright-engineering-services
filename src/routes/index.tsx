@@ -168,20 +168,15 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Top bar */}
-      <div className="bg-navy text-navy-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-2 text-center text-xs uppercase tracking-widest opacity-70">
-          Residential · Commercial · Industrial
-        </div>
-      </div>
-
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-          <a href="/" className="flex items-center gap-3">
-            <Logo className="h-12 w-12" />
-            <span className="flex flex-col leading-tight">
-              <span className="font-display text-lg font-bold tracking-tight">Bright Engineering</span>
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6">
+          <a href="/" className="flex min-w-0 items-center gap-3">
+            <Logo className="h-10 w-10 shrink-0 sm:h-12 sm:w-12" />
+            <span className="flex min-w-0 flex-col leading-tight">
+              <span className="truncate font-display text-base font-bold tracking-tight sm:text-lg">
+                Bright Engineering
+              </span>
               <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Services
               </span>
@@ -198,13 +193,7 @@ function Index() {
               </a>
             ))}
           </nav>
-          <div className="flex items-center gap-3">
-            <a
-              href={PHONE_HREF}
-              className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/25 sm:inline-flex"
-            >
-              <Phone className="size-4" /> Call Now
-            </a>
+          <div className="flex shrink-0 items-center gap-3">
             <button
               type="button"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
