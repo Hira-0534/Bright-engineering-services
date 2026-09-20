@@ -168,20 +168,15 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Top bar */}
-      <div className="bg-navy text-navy-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-2 text-center text-xs uppercase tracking-widest opacity-70">
-          Residential · Commercial · Industrial
-        </div>
-      </div>
-
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-          <a href="/" className="flex items-center gap-3">
-            <Logo className="h-12 w-12" />
-            <span className="flex flex-col leading-tight">
-              <span className="font-display text-lg font-bold tracking-tight">Bright Engineering</span>
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6">
+          <a href="/" className="flex min-w-0 items-center gap-3">
+            <Logo className="h-10 w-10 shrink-0 sm:h-12 sm:w-12" />
+            <span className="flex min-w-0 flex-col leading-tight">
+              <span className="truncate font-display text-base font-bold tracking-tight sm:text-lg">
+                Bright Engineering
+              </span>
               <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Services
               </span>
@@ -198,13 +193,7 @@ function Index() {
               </a>
             ))}
           </nav>
-          <div className="flex items-center gap-3">
-            <a
-              href={PHONE_HREF}
-              className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/25 sm:inline-flex"
-            >
-              <Phone className="size-4" /> Call Now
-            </a>
+          <div className="flex shrink-0 items-center gap-3">
             <button
               type="button"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -246,12 +235,12 @@ function Index() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:gap-12 lg:py-24">
           <div data-reveal>
             <span className="mb-6 inline-block rounded-full bg-secondary px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-secondary-foreground">
               Engineering · Construction · Facility Care
             </span>
-            <h1 className="font-display text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-3xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
               Power, build &amp; care for your space —{" "}
               <span className="text-primary">all in one call.</span>
             </h1>
@@ -289,8 +278,8 @@ function Index() {
               </span>
             </div>
           </div>
-          <div className="relative">
-            <div className="overflow-hidden rounded-3xl shadow-2xl shadow-navy/20 ring-1 ring-black/5">
+          <div className="relative" data-reveal style={{ "--reveal-delay": "150ms" } as CSSProperties}>
+            <div className="overflow-hidden rounded-3xl shadow-2xl shadow-navy/20 ring-1 ring-black/5 transition-transform duration-500 hover:scale-[1.02]">
               <img
                 src={heroImage}
                 alt="BES technician servicing an industrial generator"
@@ -309,8 +298,8 @@ function Index() {
 
       {/* Services */}
       <section id="services" className="scroll-mt-24 border-t border-border bg-card">
-        <div className="mx-auto max-w-7xl px-6 py-20" data-reveal>
-          <div className="mb-14 max-w-2xl">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20" data-reveal>
+          <div className="mb-10 max-w-2xl sm:mb-14">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">What We Do</span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
               Complete services for your property
@@ -320,11 +309,13 @@ function Index() {
               same reliable team.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
+          <div className="grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+            {services.map((service, i) => (
               <div
                 key={service.title}
-                className="group rounded-2xl border border-border bg-background p-7 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10"
+                data-reveal
+                style={{ "--reveal-delay": `${(i % 3) * 90}ms` } as CSSProperties}
+                className="group rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 sm:p-7"
               >
                 <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-secondary text-secondary-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                   <service.icon className="size-6" />
@@ -338,7 +329,7 @@ function Index() {
             {/* CTA card fills the grid */}
             <a
               href={PHONE_HREF}
-              className="group flex flex-col justify-between rounded-2xl bg-navy p-7 text-navy-foreground transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="group flex flex-col justify-between rounded-2xl bg-navy p-6 text-navy-foreground transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-navy/30 sm:p-7"
             >
               <div>
                 <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground">
@@ -360,7 +351,7 @@ function Index() {
 
       {/* Why us */}
       <section id="why-us" className="scroll-mt-24 bg-navy text-navy-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-20" data-reveal>
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20" data-reveal>
           <div className="max-w-3xl">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Why BES</span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
@@ -368,9 +359,14 @@ function Index() {
             </h2>
           </div>
           <div className="mt-10 grid gap-x-14 gap-y-8 sm:grid-cols-2">
-            {whyUs.map((item) => (
-              <div key={item.title} className="flex gap-5">
-                <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
+            {whyUs.map((item, i) => (
+              <div
+                key={item.title}
+                data-reveal
+                style={{ "--reveal-delay": `${i * 90}ms` } as CSSProperties}
+                className="flex gap-4 rounded-2xl p-4 transition-colors duration-300 hover:bg-navy-foreground/5 sm:gap-5"
+              >
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary transition-transform duration-300 hover:scale-110">
                   <item.icon className="size-5" />
                 </div>
                 <div>
@@ -385,7 +381,7 @@ function Index() {
 
       {/* Contact */}
       <section id="contact" className="scroll-mt-24">
-        <div className="mx-auto max-w-7xl px-6 py-20" data-reveal>
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20" data-reveal>
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Get In Touch</span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
@@ -399,7 +395,7 @@ function Index() {
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
             <a
               href={PHONE_HREF}
-              className="group flex items-center gap-5 rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+              className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg sm:gap-5 sm:p-7"
             >
               <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
                 <Phone className="size-6" />
@@ -413,14 +409,14 @@ function Index() {
             </a>
             <a
               href={EMAIL_HREF}
-              className="group flex items-center gap-5 rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+              className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg sm:gap-5 sm:p-7"
             >
               <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-navy text-navy-foreground">
                 <Mail className="size-6" />
               </div>
               <div className="min-w-0">
                 <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Email Us</p>
-                <p className="break-words text-sm font-bold group-hover:text-primary transition-colors sm:text-base">
+                <p className="break-all text-sm font-bold group-hover:text-primary transition-colors sm:text-base">
                   {EMAIL}
                 </p>
               </div>
