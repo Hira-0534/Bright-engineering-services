@@ -416,7 +416,7 @@ function Index() {
               </div>
               <div className="min-w-0">
                 <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Email Us</p>
-                <p className="break-words text-sm font-bold group-hover:text-primary transition-colors sm:text-base">
+                <p className="break-all text-sm font-bold group-hover:text-primary transition-colors sm:text-base">
                   {EMAIL}
                 </p>
               </div>
