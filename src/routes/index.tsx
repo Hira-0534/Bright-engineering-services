@@ -351,7 +351,7 @@ function Index() {
 
       {/* Why us */}
       <section id="why-us" className="scroll-mt-24 bg-navy text-navy-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-20" data-reveal>
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20" data-reveal>
           <div className="max-w-3xl">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Why BES</span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
@@ -359,9 +359,14 @@ function Index() {
             </h2>
           </div>
           <div className="mt-10 grid gap-x-14 gap-y-8 sm:grid-cols-2">
-            {whyUs.map((item) => (
-              <div key={item.title} className="flex gap-5">
-                <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
+            {whyUs.map((item, i) => (
+              <div
+                key={item.title}
+                data-reveal
+                style={{ "--reveal-delay": `${i * 90}ms` } as CSSProperties}
+                className="flex gap-4 rounded-2xl p-4 transition-colors duration-300 hover:bg-navy-foreground/5 sm:gap-5"
+              >
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary transition-transform duration-300 hover:scale-110">
                   <item.icon className="size-5" />
                 </div>
                 <div>
@@ -376,7 +381,7 @@ function Index() {
 
       {/* Contact */}
       <section id="contact" className="scroll-mt-24">
-        <div className="mx-auto max-w-7xl px-6 py-20" data-reveal>
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20" data-reveal>
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Get In Touch</span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
@@ -390,7 +395,7 @@ function Index() {
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
             <a
               href={PHONE_HREF}
-              className="group flex items-center gap-5 rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+              className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg sm:gap-5 sm:p-7"
             >
               <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
                 <Phone className="size-6" />
@@ -404,7 +409,7 @@ function Index() {
             </a>
             <a
               href={EMAIL_HREF}
-              className="group flex items-center gap-5 rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+              className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg sm:gap-5 sm:p-7"
             >
               <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-navy text-navy-foreground">
                 <Mail className="size-6" />
