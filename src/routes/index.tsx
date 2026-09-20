@@ -170,18 +170,8 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Top bar */}
       <div className="bg-navy text-navy-foreground">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-6 py-2 text-sm">
-          <div className="flex items-center gap-6">
-            <a href={PHONE_HREF} className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Phone className="size-3.5" /> {PHONE_DISPLAY}
-            </a>
-            <a href={EMAIL_HREF} className="hidden items-center gap-2 opacity-70 hover:text-primary hover:opacity-100 transition-colors md:flex">
-              <Mail className="size-3.5" /> {EMAIL}
-            </a>
-          </div>
-          <span className="text-xs uppercase tracking-widest opacity-70">
-            Residential · Commercial · Industrial
-          </span>
+        <div className="mx-auto max-w-7xl px-6 py-2 text-center text-xs uppercase tracking-widest opacity-70">
+          Residential · Commercial · Industrial
         </div>
       </div>
 
@@ -319,7 +309,7 @@ function Index() {
 
       {/* Services */}
       <section id="services" className="scroll-mt-24 border-t border-border bg-card">
-        <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mx-auto max-w-7xl px-6 py-20" data-reveal>
           <div className="mb-14 max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">What We Do</span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
@@ -370,7 +360,7 @@ function Index() {
 
       {/* Why us */}
       <section id="why-us" className="scroll-mt-24 bg-navy text-navy-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mx-auto max-w-7xl px-6 py-20" data-reveal>
           <div className="max-w-3xl">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Why BES</span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
@@ -395,7 +385,7 @@ function Index() {
 
       {/* Contact */}
       <section id="contact" className="scroll-mt-24">
-        <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mx-auto max-w-7xl px-6 py-20" data-reveal>
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Get In Touch</span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
