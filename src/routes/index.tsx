@@ -129,7 +129,7 @@ const whyUs = [
 function Logo({ className = "h-11 w-11" }: { className?: string }) {
   return (
     <img
-      src={besMark.url}
+src="/favicon.png"
       alt="BES — Bright Engineering Services logo"
       className={`${className} rounded-xl object-cover`}
       loading="lazy"
@@ -439,7 +439,6 @@ function Index() {
       <footer className="border-t border-border bg-card">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 py-12 md:flex-row">
           <div className="flex items-center gap-3">
-            <Logo className="h-10 w-10" />
             <div className="leading-tight">
               <p className="font-display font-bold">Bright Engineering Services</p>
               <p className="text-xs text-muted-foreground">Engineering · Construction · Facility Care</p>
