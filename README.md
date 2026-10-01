@@ -1,34 +1,47 @@
-# Bright Home Services
+# ⚡ Bright Engineering Services (BES)
 
-Bright engineering services brightengineeringservices642@gmail.com lectrical and mechanical work
+A professional, high-performance web platform built for **Bright Engineering Services (BES)** — your trusted partner for generator maintenance, electrical & mechanical works, construction, janitorial services, gardening, fumigation, and house deep cleaning across Pakistan.
 
- Generator maintenance, Constructions, 
+---
 
-Janitorial services' gardening works, Famigations, 
+## 🌟 Live Application
+* **Live Website:** [brightengineering.netlify.app](https://brightengineering.netlify.app/)
 
-house deep cleanings.
+---
 
-Contact us: •📞0301-277-5642 these are details make website for this like professional business website
+## 🛠️ Core Services Offered
+* **Generator Maintenance:** Complete servicing, load testing, and 24/7 emergency repairs for industrial and residential generators.
+* **Electrical & Mechanical Works:** Professional wiring, installations, and HVAC handling by certified technicians.
+* **Construction & Civil Works:** Reliable renovations and structural improvements.
+* **Facility Care & Janitorial:** Uniformed, trained cleaning staff for offices, malls, and homes.
+* **Gardening & Landscaping:** Plantation and seasonal property maintenance.
+* **Fumigation:** Safe, family-friendly pest control treatments.
+* **House Deep Cleaning:** Top-to-bottom post-construction and seasonal cleaning.
 
-This project was built with [Lovable](https://lovable.dev).
+---
 
-**Live app**: https://bright-engineering-services.lovable.app
+## 📞 Get In Touch
+* **Phone / Helpline:** `0301-277-5642` (Available 24/7)
+* **Email:** `brightengineeringservices642@gmail.com`
+* **WhatsApp:** [Chat with us](https://wa.me/923012775642)
 
-## Build with Lovable
+---
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/bc683e14-86fc-4ad0-8f5e-3c5939e79a46).
+## 💻 Tech Stack & Development
+This project was built with **TanStack Start**, **Vite**, **React**, and **Tailwind CSS**, originally bootstrapped via [Lovable](https://lovable.dev) and hosted on **Netlify**.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+### Local Setup
+If you prefer working locally, ensure you have **Node.js** and **npm** installed:
 
 ```sh
+# Clone the repository
 git clone <this-repository-url>
-cd <repository-name>
-npm i
+
+# Navigate to the project directory
+cd bright-engineering-services
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-```
