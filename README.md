@@ -28,7 +28,7 @@ A professional, high-performance web platform built for **Bright Engineering Ser
 ---
 
 ## 💻 Tech Stack & Development
-This project was built with **TanStack Start**, **Vite**, **React**, and **Tailwind CSS**, originally bootstrapped via [Lovable](https://lovable.dev) and hosted on **Netlify**.
+This project was built with **TanStack Start**, **Vite**, **React**, and **Tailwind CSS**,  and hosted on **Netlify**.
 
 ### Local Setup
 If you prefer working locally, ensure you have **Node.js** and **npm** installed:
